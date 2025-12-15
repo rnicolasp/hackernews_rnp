@@ -156,7 +156,7 @@ async function loadNextBatch(container, botonCargar) {
   if (!ids || ids.length === 0) {
     if (botonCargar) {
       botonCargar.disabled = true;
-      botonCargar.innerText = 'No hay más historias';
+      botonCargar.innerText = 'No hay mas historias';
     }
     cargaDiv.classList.remove('visible');
     return;
@@ -176,7 +176,7 @@ async function loadNextBatch(container, botonCargar) {
   if (estado.page * estado.itemsPerPage >= (estado.currentIds ? estado.currentIds.length : 0)) {
     if (botonCargar) {
       botonCargar.disabled = true;
-      botonCargar.innerText = 'No hay más historias';
+      botonCargar.innerText = 'No hay mas historias';
     }
   }
 
@@ -239,7 +239,7 @@ async function loadComments(ids, container) {
     comentarioEl.className = 'comment';
     comentarioEl.innerHTML = `
       <div class="meta">
-        ▲ <a href="#user=${comentario.by}">${comentario.by}</a>
+        <a href="#user=${comentario.by}">${comentario.by}</a>
         ${new Date(comentario.time * 1000).toLocaleTimeString()}
       </div>
       <div class="comment-text" id="comment-text-${comentario.id}">${comentario.text || ''}</div>
